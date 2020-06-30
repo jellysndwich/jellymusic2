@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'">-->
-    <title>JellyMusic2</title>
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/index.css">
-  </head>
-  <body>
-    <!-- Header -->
-    <div class="header">
-      <div class="burger-wrapper">
-        <div class="burger"></div>
-      </div>
-      <div class="logo-text">JellyMusic2</div>
-      <div class="back_btn">
-        <div class="circle"></div>
-        <div class="text">Back</div>
-      </div>
-    </div>
-    <!-- Nav -->
-    <div class="nav">
-      <ul class="nav_main">
-        <li> <a class="nav_link">Home</a></li>
-        <li> <a class="nav_link">Playlists</a></li>
-        <li> <a class="nav_link">Settings</a></li>
-        <div class="nav_divider"></div>
-        <li><a class="nav_link">GitHub</a></li>
-      </ul>
-    </div>
 
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/TimelineMax.min.js"></script>
-    <script src="js/ui.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>JellyMusic2</title>
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/effects.css">
+</head>
+
+<body>
+  <!-- Waves -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Header -->
+  <header>
+    <div class="header__inner">
+      <h3 class="performer">The Parakit</h3>
+      <h1 class="title">Save Me (feat. Alden Jacob)</h1>
+      <div class="cover">
+        <img src="https://muzter.net/_ld/30/21808475.jpg" />
+      </div>
+    </div>
+  </header>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer__inner">
+      <!-- PREVIOUS TRACK-->
+      <div class="left">
+        <span class="caps">Previous</span>
+        <br />
+        <span id="previousTitle">This Love</span>
+      </div>
+
+      <!-- PLAYER -->
+      <div class="player">
+        <!-- BUTTONS -->
+        <div class="buttons">
+          <i class="btn-prev fa fa-step-backward" aria-hidden="true"></i>
+          <div class="btn-switch">
+            <i class="btn-play fa fa-play" aria-hidden="true"></i>
+            <i class="btn-pause fa fa-pause" aria-hidden="true"></i>
+          </div>
+          <i class="btn-next fa fa-step-forward" aria-hidden="true"></i>
+        </div>
+        <!-- SLIDERS -->
+        <div class="sliders">
+          <span id="current-time">0:45</span>
+          <div class="slider" data-direction="horizontal">
+            <div class="progress" style="width: 50%;">
+              <div class="pin" id="progress-pin" data-method="rewind"></div>
+            </div>
+          </div>
+          <span id="total-time">3:40</span>
+        </div>
+      </div>
+      <!-- NEXT TRACK-->
+      <div class="right">
+        <span class="caps">Up next</span>
+        <br />
+        <span id="nextTitle">Hello</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/waves.js"></script>
+</body>
+
 </html>

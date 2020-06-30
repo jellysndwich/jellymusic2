@@ -3,8 +3,9 @@
   src: url("../assets/fonts/Oswald_Variable.ttf");
 }
 
+/* BASEMENT */
+
 i[class^="btn"] {
-  font-size: 20px;
   margin-right: 30px;
   cursor: pointer;
 }
@@ -25,7 +26,7 @@ a {
 
 body {
   margin: 0;
-  background-color: var(--bg-1);
+  background: var(--accent);
   font-family: 'Oswald', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,116 +35,142 @@ body {
   width: 100vw;
 }
 
-/* HEADER */
-.header {
-  position: fixed;
-  left: 2.2vw;
-  top: 2.2vw;
-  margin-left: -4px;
-  margin-top: -6px;
-  color: var(--foreground-1);
-  z-index: 103;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  height: 30px;
-}
-.header .burger-wrapper {
-  width: 20px;
-  height: 30px;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-}
-.header .burger {
-  width: 20px;
-  height: 3px;
-  background-color: var(--foreground-1);
-  position: relative;
-}
-.header .burger:before, .header .burger:after {
-  content: '';
-  width: 20px;
-  height: 3px;
-  background-color: var(--foreground-1);
-  position: absolute;
-  left: 0;
-}
-.header .burger:before {
-  top: -6px;
-}
-.header .burger:after {
-  top: 6px;
-  width: 14px;
-}
-.header .logo-text {
-  font-size: 20px;
-  color: var(--foreground-1);
+.caps {
+  text-transform: uppercase;
 }
 
-.back_btn {
-  cursor: pointer;
-  position: relative;
-  color: rgba(37, 33, 32, 0.4);
-  font-size: 18px;
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 30vh;
+  min-height: 250px;
+  color: var(--bg);
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 25px;
+  width: auto;
+  height: 100%;
+  text-align: center;
+}
+
+.cover {
+  width: 30vh;
+  min-width: 100px;
+  min-height: 100px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+
+/* Footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  min-height: 100px;
+  border-radius: 25px 25px 0 0;
+  background: var(--bg-2);
+  color: var(--fg);
+}
+
+.footer__inner {
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: auto;
+  height: 100%;
+  text-align: center;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+footer .left {
+  text-align: left;
+}
+
+footer .right {
+  text-align: right;
+}
+
+footer .player {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.buttons, .sliders {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.buttons i[class^="btn"] {
+  font-size: 30px;
+}
+
+.btn-switch {
+  width: 30px;
+  height: 40px;
+  display: flex;
+  margin-right: 30px;
+  justify-content: center;
+}
+
+.btn-play, .btn-pause {
+  position: absolute;
+  font-size: 40px;
+}
+
+.btn-pause {
   display: none;
   opacity: 0;
 }
-.back_btn .circle {
-  background-color: rgba(37, 33, 32, 0.3);
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
 
-/* NAV */
-.nav {
-  will-change: transform;
-  position: fixed;
-  background-color: var(--bg-2);
-  height: 100vh;
-  z-index: 10;
-  box-shadow: 0 30px 80px 0 rgba(61, 59, 59, 0.25);
-  /* display: none; */
-}
-.nav ul {
-  color: var(--foreground-1);
-}
-.nav ul.nav_main {
-  margin-top: 20vh;
-}
-.nav ul li {
-  margin-left: 6vw;
-  margin-right: 6vw;
-  margin-bottom: .5vw;
-  position: relative;
-}
+/* Sliders */
 
-.nav_link {
-  font-size: 3.8vw;
+.slider {
+  background-color: gray;
+  border-radius: 2px;
   cursor: pointer;
-}
-.nav_link:before {
-  content: '';
-  position: absolute;
-  width: 4vw;
-  height: 2px;
-  background-color: var(--foreground-1);
-  left: -12vw;
-  top: 50%;
-  transition: 0.4s;
+  height: 5px;
+  position: relative;
+  width: 100%;
+  margin: 0 20px;
 }
 
-.nav_divider {
-  width: 6vw;
-  height: 2px;
-  background-color: var(--foreground-1);
-  margin: 4vh 6vw;
+
+/* Hover effects */
+
+*[class$="hover"] {
+  transition: all .3s ease-in-out;
 }
 
-.nav li .nav_link:hover:before {
-  left: -6vw;
+.upscale-on-hover:hover {
+  transform: scale(1.1);
+}
+
+.halfopacity-on-hover:hover {
+  opacity: 0.5;
 }

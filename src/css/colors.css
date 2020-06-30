@@ -1,11 +1,11 @@
 /* Colors */
 
 :root {
-    --bg-1: #1F2128;
+    --bg: #1F2128;
 
     --bg-2: #323542;
-
-    --bg-3: #505A6F;
     
-    --foreground-1: #f7f7f7;
+    --fg: #f7f7f7;
+
+    --accent: #11C1A0;
   }
