@@ -1,0 +1,107 @@
+nav {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav input[name="tab-control"] {
+    display: none;
+}
+
+nav ul {
+    position: absolute;
+    padding: 25px 5px;
+    border-radius: 0 25px 25px 0;
+    background: var(--bg-2);
+    color: var(--fg);
+    font-size: 30px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    margin: 10px;
+    width: fit-content;
+    box-sizing: border-box;
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li label {
+    color: var(--fg);
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+}
+
+.content section {
+    display: none;
+    animation-name: content;
+    animation-direction: normal;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    line-height: 1.4;
+}
+
+/* TAB 1 */
+
+nav input[name="tab-control"]:nth-of-type(1):checked~ul>li:nth-child(1)>label {
+    cursor: default;
+    color: var(--accent);
+}
+
+nav input[name="tab-control"]:nth-of-type(1):checked~.content>section:nth-child(1) {
+    display: block;
+}
+
+/* TAB 2 */
+
+nav input[name="tab-control"]:nth-of-type(2):checked~ul>li:nth-child(2)>label {
+    cursor: default;
+    color: var(--accent);
+}
+
+nav input[name="tab-control"]:nth-of-type(2):checked~.content>section:nth-child(2) {
+    display: block;
+}
+
+/* TAB 3 */
+
+nav input[name="tab-control"]:nth-of-type(3):checked~ul>li:nth-child(3)>label {
+    cursor: default;
+    color: var(--accent);
+}
+
+nav input[name="tab-control"]:nth-of-type(3):checked~.content>section:nth-child(3) {
+    display: block;
+}
+
+/* TAB 4 */
+
+nav input[name="tab-control"]:nth-of-type(4):checked~ul>li:nth-child(4)>label {
+    cursor: default;
+    color: var(--accent);
+}
+
+nav input[name="tab-control"]:nth-of-type(4):checked~.content>section:nth-child(4) {
+    display: block;
+}
+
+@keyframes content {
+    from {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

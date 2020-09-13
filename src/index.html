@@ -3,74 +3,124 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>JellyMusic2</title>
+  <title>JellyMusic 2</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/colors.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/tabs.css">
   <link rel="stylesheet" href="css/effects.css">
 </head>
 
 <body>
-  <!-- Waves -->
-  <canvas id="canvas"></canvas>
-
-  <!-- Header -->
-  <header>
-    <div class="header__inner">
-      <h3 class="performer">The Parakit</h3>
-      <h1 class="title">Save Me (feat. Alden Jacob)</h1>
-      <div class="cover">
-        <img src="https://muzter.net/_ld/30/21808475.jpg" />
-      </div>
-    </div>
-  </header>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer__inner">
-      <!-- PREVIOUS TRACK-->
-      <div class="left">
-        <span class="caps">Previous</span>
-        <br />
-        <span id="previousTitle">This Love</span>
-      </div>
-
-      <!-- PLAYER -->
-      <div class="player">
-        <!-- BUTTONS -->
-        <div class="buttons">
-          <i class="btn-prev fa fa-step-backward" aria-hidden="true"></i>
-          <div class="btn-switch">
-            <i class="btn-play fa fa-play" aria-hidden="true"></i>
-            <i class="btn-pause fa fa-pause" aria-hidden="true"></i>
+  <div class="main-section">
+    <div class="prev-text hover-target">previous</div>
+    <div class="next-text hover-target">next</div>
+    <div class="section-center">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <h1 class="effect-shine">Moves Like Jagger</h1>
           </div>
-          <i class="btn-next fa fa-step-forward" aria-hidden="true"></i>
-        </div>
-        <!-- SLIDERS -->
-        <div class="sliders">
-          <span id="current-time">0:45</span>
-          <div class="slider" data-direction="horizontal">
-            <div class="progress" style="width: 50%;">
-              <div class="pin" id="progress-pin" data-method="rewind"></div>
-            </div>
+          <div class="col-12 text-center mb-2">
+            <div class="dancing">Maroon 5</div>
           </div>
-          <span id="total-time">3:40</span>
+          <div class="col-12 text-center mt-4 mt-lg-5">
+            <p>
+              <span class="playlist-text hover-target">playlist</span>
+            </p>
+          </div>
         </div>
       </div>
-      <!-- NEXT TRACK-->
-      <div class="right">
-        <span class="caps">Up next</span>
-        <br />
-        <span id="nextTitle">Hello</span>
+    </div>
+  </div>
+
+  <!--<div class="playback-controls">
+    <div class="current jp-current-time">00:00</div>
+    <div class="play-controls">
+      <a href="javascript:;" class="icon-previous jp-previous" title="previous"></a>
+      <a href="javascript:;" class="icon-play jp-play" title="play"></a>
+      <a href="javascript:;" class="icon-pause jp-pause" title="pause"></a>
+      <a href="javascript:;" class="icon-next jp-next" title="next"></a>
+    </div>
+    <div class="progress"></div>
+    <div class="volume-level">
+      <a href="javascript:;" class="icon-volume-up" title="max volume"></a>
+      <a href="javascript:;" class="icon-volume-down" title="mute"></a>
+    </div>
+  </div>-->
+
+  <div class="playlist-section">
+    <div class="playlist-close hover-target"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h3>Playlist</h3>
+        </div>
+        <div class="col-12 mt-3 text-center">
+          <p><span>D:/Music/</span></p>
+        </div>
+        <div class="col-12 text-center">
+          <p>
+            total length: 3 hours 15 minutes<br>
+            track count: 37
+          </p>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+        </div>
       </div>
     </div>
-  </footer>
+  </div>
+
+
+  <div class='cursor' id="cursor"></div>
+  <div class='cursor2' id="cursor2"></div>
+  <div class='cursor3' id="cursor3"></div>
+
+  <!-- Link to GitHub -->
+  <a href="https://github.com/jellysndwich" class="link-to-github hover-target" target=”_blank”>
+    <i class="fab fa-github"></i>
+  </a>
 
   <!-- Scripts -->
   <script src="js/jquery.min.js"></script>
-  <script src="js/TweenMax.min.js"></script>
   <script src="js/ui.js"></script>
-  <script src="js/waves.js"></script>
+
 </body>
 
 </html>
